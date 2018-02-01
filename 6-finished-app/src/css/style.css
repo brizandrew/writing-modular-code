@@ -1,0 +1,15 @@
+body{
+    width: 100px;
+    margin: 0 auto;
+}
+
+#counter{
+    text-align: center;
+    font-size: 28px;
+}
+
+#button{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 0 auto;
+}

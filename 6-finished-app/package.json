@@ -1,0 +1,30 @@
+{
+  "name": "5-my-app",
+  "version": "1.0.0",
+  "description": "This is what your app inside `5-my-app` should look like after completing the guide. You can use this directory as a reference or a starting template for future projects of your own.",
+  "main": "webpack.config.babel.js",
+  "scripts": {
+    "build": "webpack --progress --hide-modules",
+    "dev": "webpack-dev-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.9",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "postcss-loader": "^2.0.10",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^7.0.0"
+  }
+}
