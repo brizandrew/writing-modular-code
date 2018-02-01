@@ -113,7 +113,7 @@ $ npm install moment --save
 Your package.json file should now look like this:
 ```json
 {
-  "name": "3-node-project",
+  "name": "2-node-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
