@@ -286,6 +286,8 @@ const scaleNumber = scaleLinear()
   .range([10, 100]);
 ```
 
+*Note: Remember that to import libraries like `lodash`, `d3-selection`, and `d3-scale`, you'll first need to install them with the `npm install packageName --save` terminal command.*
+
 Now we run our `webpack` `build` command in the console which we wrote in the last lesson.
 ```bash
 $ npm run build
@@ -391,7 +393,7 @@ As mentioned above, we'd use curly brackets `{  }` to import what we need.
 import { add, divide } from './math.js';
 
 add(2, 2); // 4
-divide (10 / 2) // 5
+divide (10, 2) // 5
 ```
 
 That's pretty much all there is to know about making and using modules. Now there's only one last thing we need to do: combine it with html and css.
