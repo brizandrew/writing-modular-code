@@ -260,7 +260,7 @@ Say we have a an array of JSON objects we want to filter then group by a key.
 
 Instead of bringing in the entire Lodash library:
 
-````javascript
+```javascript
 import * as _ from 'lodash'
 ```
 
@@ -284,7 +284,6 @@ const svg = select('body').append('svg');
 const scaleNumber = scaleLinear()
   .domain([0, 10])
   .range([10, 100]);
-
 ```
 
 Now we run our `webpack` `build` command in the console which we wrote in the last lesson.
