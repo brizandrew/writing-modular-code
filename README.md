@@ -252,6 +252,41 @@ var tomorrow = moment().add(1, 'days').format('dddd');
 console.log('Today is ' + today + ', and tomorrow is ' + tomorrow + '.');
 ```
 
+You can also import multiple functions from a single module. This can be done by listing the functions within curly brackets: `{  }` 
+
+For this example, we will import functions from [Lodash](https://lodash.com/docs), a JavaScript library with many utility functions that are helpful with data manipulation. 
+
+Say we have a an array of JSON objects we want to filter then group by a key. 
+
+Instead of bringing in the entire Lodash library:
+
+````javascript
+import * as _ from 'lodash'
+```
+
+We can bring in what we need:
+
+```javascript
+import { filter, groupBy } from 'lodash';
+
+const filteredData = filter(jsonArray);
+const groupedData = groupBy(filteredData, 'key');
+```
+
+This can be used for other populary libaries such as d3.js. Almost all of the library's popular functions -- scale, shapes, selection -- are written to be modular, at least in V4. 
+
+```javascript
+import { select, selectAll } from 'd3-selection';
+import { scaleLinear } from 'd3-scale';
+
+const svg = select('body').append('svg');
+
+const scaleNumber = scaleLinear()
+  .domain([0, 10])
+  .range([10, 100]);
+
+```
+
 Now we run our `webpack` `build` command in the console which we wrote in the last lesson.
 ```bash
 $ npm run build
@@ -317,6 +352,47 @@ So let's build and run our file again:
 ```bash
 $ npm run build
 $ node dist/bundle.js
+```
+
+In some cases, you might need to export multiple functions from one file.
+
+For example, say you want to have a file that handles basic calculations, such as adding, subtracting, multiplying or dividing. 
+
+We create a `math.js` file and write our functions.
+
+```javascript
+// math.js
+
+// adding
+export function add (a, b) {
+  return a + b;
+};
+
+// subtracting
+export function subtract (a, b) {
+  return a - b;
+};
+
+// multiplying
+export function multiply (a, b) {
+  return a * b;
+}
+
+// dividing
+export function divide (a, b) {
+  return a / b;
+}
+```
+
+See the lack of `default`? Using just `export` allows you to `import` any function from `math.js`. 
+
+As mentioned above, we'd use curly brackets `{  }` to import what we need.
+
+```javascript
+import { add, divide } from './math.js';
+
+add(2, 2); // 4
+divide (10 / 2) // 5
 ```
 
 That's pretty much all there is to know about making and using modules. Now there's only one last thing we need to do: combine it with html and css.
